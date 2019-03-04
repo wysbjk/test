@@ -577,7 +577,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551687760147" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551688364888" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -634,7 +634,7 @@
     </option>
     <option name="contentProportion" value="0.16071428" />
   </component>
-  <component name="RunManager" selected="Spring Boot.FileServerApplication">
+  <component name="RunManager" selected="JUnit.All in file-server">
     <configuration name="CodeLib (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.turbid.basicapi.tools.CodeLib" />
       <module name="basic-api" />
@@ -665,6 +665,15 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in file-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="file-server" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -840,9 +849,11 @@
       <item itemvalue="Spring Boot.ZuulServerApplication" />
       <item itemvalue="Spring Boot.WebsiteApplication" />
       <item itemvalue="Spring Boot.FileServerApplication" />
+      <item itemvalue="JUnit.All in file-server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in file-server" />
         <item itemvalue="Application.CodeLib" />
         <item itemvalue="Application.CodeLib (1)" />
         <item itemvalue="JUnit.DataServerApplicationTests.testCache" />
@@ -879,7 +890,7 @@
       <workItem from="1545895830611" duration="17595000" />
       <workItem from="1551666306267" duration="2032000" />
       <workItem from="1551668383828" duration="5029000" />
-      <workItem from="1551674405238" duration="6425000" />
+      <workItem from="1551674405238" duration="6893000" />
     </task>
     <task id="LOCAL-00001" summary="dsa">
       <created>1544538820197</created>
@@ -1001,7 +1012,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267458000" />
+    <option name="totallyTimeSpent" value="267926000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
