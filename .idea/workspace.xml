@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcfa2ebf-2a15-4ee0-809e-afd56336af75" name="Default" comment="" />
+    <list default="true" id="fcfa2ebf-2a15-4ee0-809e-afd56336af75" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -577,7 +579,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551688364888" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551688882027" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -890,7 +892,7 @@
       <workItem from="1545895830611" duration="17595000" />
       <workItem from="1551666306267" duration="2032000" />
       <workItem from="1551668383828" duration="5029000" />
-      <workItem from="1551674405238" duration="6893000" />
+      <workItem from="1551674405238" duration="7491000" />
     </task>
     <task id="LOCAL-00001" summary="dsa">
       <created>1544538820197</created>
@@ -980,9 +982,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SupportServerApplicationTests_contextLoads_(1) - 2018.12.01 at 16h 58m 44s.xml">
-      <configuration name="SupportServerApplicationTests.contextLoads (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataServerApplicationTests_testCache - 2018.12.22 at 05h 55m 55s.xml">
       <configuration name="DataServerApplicationTests.testCache" configurationId="JUnit" />
     </history-entry>
@@ -1010,9 +1009,12 @@
     <history-entry file="DataServerApplicationTests_testCache - 2018.12.22 at 08h 55m 39s.xml">
       <configuration name="DataServerApplicationTests.testCache" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_file-server - 2019.03.04 at 16h 32m 49s.xml">
+      <configuration name="All in file-server" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267926000" />
+    <option name="totallyTimeSpent" value="268524000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1036,7 +1038,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32963988" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48497853" weight="0.300554" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48497853" weight="0.30043384" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8919886" weight="0.25623268" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
