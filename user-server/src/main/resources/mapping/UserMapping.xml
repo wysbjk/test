@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- \u6307\u5b9a\u5de5\u4f5c\u7a7a\u95f4\uff0c\u8981\u4e0e\u63a5\u53e3\u540d\u76f8\u540c\uff0c\u6e90\u4ee3\u7801\u6ca1\u6709\u53bb\u770b\uff0c\u731c\u6d4b\u5e94\u8be5\u662f\u901a\u8fc7"\u8fd9\u91cc\u7684namespace.\u4e0b\u8fb9\u65b9\u6cd5\u7684id"\u6765\u5b9a\u4f4d\u65b9\u6cd5\u7684 -->
+<mapper namespace="com.turbid.userserver.dao.UserMapper">
+
+
+
+</mapper>

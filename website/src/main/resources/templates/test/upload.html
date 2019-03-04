@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World!</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-form.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td  id="imgDiv">
+            <img id="imgid"  style="width:137px; height:127px"/>
+        </td>
+    </tr>
+</table>
+<form id="upload" enctype="multipart/form-data" method="post"><p style='color:red;text-align:left;'>
+    注：<br/>1.照片的像素为160*180px。<br/>2.照片格式为BMP/JPG/JPEG。<br/>3.建议照片大小不超过40k。</p>
+    <input type="file" name="file" id="uploadimage" /><br/>
+    <input type="button" value="上传" id="btn" style="width:137px; height:27px"/>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#btn").click(function () {
+            if(confirm("确认上传？")){
+                var imagePath = $("#uploadimage").val();
+                if (imagePath == "") {
+                    alert("please upload image file",2);
+                    return false;
+                }
+                var strExtension = imagePath.substr(imagePath.lastIndexOf('.') + 1);
+                if (strExtension!='jpeg') {
+                    if (strExtension!='bmp') {
+                        if (strExtension!='png') {
+                            alert("please upload file that is a image",2);
+                            return false;
+                        }
+                    }
+                }
+                $("#upload").ajaxSubmit({
+                    type : 'POST',
+                    url : 'http://localhost:8092/images',
+                    data: JSON.stringify({"title":"aaa","fg_code":"1121"}),
+                    contentType: 'application/json; charset=UTF-8',
+                    dataType:'json',
+                    success : function(result) {
+
+                    }
+                });
+            }
+        })
+    });
+</script>
+</body>

@@ -1,0 +1,63 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: turbid-website
+  thymeleaf:
+    cache: false #关闭缓存
+    prefix: classpath:/templates/ #添加路径前缀
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    enabled: true
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/, classpath:/static/, classpath:/public/
+
+eureka:
+  client:
+        # Spring Cloud Eureka 注册中心地址
+    service-url:
+      #指定服务中心地址
+      defaultZone: http://turbid:turbid321@localhost:8000/eureka/
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+    #定义服务续约任务的调用间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #定义服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #根路径
+    home-page-url: http://${eureka.instance.hostname}/
+    #状态页面
+    status-page-url: http://${eureka.instance.hostname}/info
+    #健康检查
+    health-check-url: http://${eureka.instance.hostname}/health
+
+#端点配置首页
+management:
+  server:
+    servlet:
+      context-path: /
+
+
+feign:
+  compression:
+    request:
+      enabled: true #对请求进行压缩
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+  hystrix:
+    enabled: true
+
+
+
+
+
+
+
+
+
+

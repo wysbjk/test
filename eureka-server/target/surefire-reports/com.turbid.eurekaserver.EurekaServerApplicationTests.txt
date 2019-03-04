@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.turbid.eurekaserver.EurekaServerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.607 s - in com.turbid.eurekaserver.EurekaServerApplicationTests

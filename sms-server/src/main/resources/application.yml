@@ -1,0 +1,59 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: sms-server
+  mail:
+    host: smtp.exmail.qq.com
+    account: a@anoax.com
+    from: a@anoax.com
+    pass: GSyGZkN5TdLB4KMi
+    port: 465
+    protocol: smtp
+  servlet:
+    multipart:
+      maxFileSize: 100MB
+      maxRequestSize: 100MB
+      enabled: true
+eureka:
+  client:
+    service-url:
+      #指定服务中心地址
+      defaultZone: http://turbid:turbid321@localhost:8000/eureka/
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+    #定义服务续约任务的调用间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #定义服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #首页
+    home-page-url: http://${eureka.instance.hostname}/
+    #状态页面
+    status-page-url: http://${eureka.instance.hostname}/info
+    #健康检查
+    health-check-url: http://${eureka.instance.hostname}/health
+
+com:
+  turbid:
+    sms:
+     appid: 1400164813
+     appkey: b17bdcc8135762640039ad4d4cedd77b
+     smsSign: 浑浊探索
+    securitycode: ${random.int[1000,9999]}
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: auth.turbidexplore.com
+
+feign:
+  compression:
+    request:
+      enabled: true #对请求进行压缩
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+  hystrix:
+    enabled: true

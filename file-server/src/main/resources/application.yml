@@ -1,0 +1,61 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: file-server
+  servlet:
+    multipart:
+      maxFileSize: 100MB
+      maxRequestSize: 100MB
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      #指定服务中心地址
+      defaultZone: http://turbid:turbid321@localhost:8000/eureka/
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+    #定义服务续约任务的调用间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #定义服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #首页
+    home-page-url: http://${eureka.instance.hostname}/
+    #状态页面
+    status-page-url: http://${eureka.instance.hostname}/info
+    #健康检查
+    health-check-url: http://${eureka.instance.hostname}/health
+
+com:
+  turbid:
+    upload-path:
+      images: /Users/anzhang/Software/images/
+
+## master 数据源配置
+master:
+  datasource:
+    url: jdbc:mysql://anoax.com:3306/file?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zhangan@28
+    driverClassName: com.mysql.jdbc.Driver
+
+
+###########################mybatis配置###############################
+mybatis:
+  configuration:
+    #全局映射器启用缓存
+    cache-enabled: true
+    #查询时,关闭关联对象及时加载以提高性能
+    lazy-loading-enabled: false
+    #按需加载字段(加载字段由SQL指定),不会加载关联表的所有字段,以提高性能
+    aggressive-lazy-loading: false
+    #允许返回不同的结果集以达到通用的效果
+    multiple-result-sets-enabled: true
+    #对于批量更新操作缓存SQL以提高性能
+    default-executor-type: REUSE
+    #数据库执行超时时间
+    default-statement-timeout: 25000
+  type-aliases-package: com.trubid.basicapi.entity.file

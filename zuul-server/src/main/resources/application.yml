@@ -1,0 +1,39 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: zuul-server
+
+eureka:
+  client:
+        # Spring Cloud Eureka 注册中心地址
+    service-url:
+      #指定服务中心地址
+      defaultZone: http://turbid:turbid321@localhost:8000/eureka/
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+    #定义服务续约任务的调用间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #定义服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #根路径
+    home-page-url: http://${eureka.instance.hostname}/
+    #状态页面
+    status-page-url: http://${eureka.instance.hostname}/info
+    #健康检查
+    health-check-url: http://${eureka.instance.hostname}/health
+
+zuul:
+  routes:
+    api:
+      path: /user/**
+      serviceId: user-server
+    support:
+      path: /file/**
+      serviceId: file-server
+    data:
+      path: /sms/**
+      serviceId: sms-server
+  sensitive-headers: Cookie,Set-Cookie

@@ -1,0 +1,84 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: data-server
+  redis:
+    database: 0
+    host: anoax.com
+    port: 6379
+    password:
+    jedis:
+      pool:
+       #最大连接数据库连接数,设 0 为没有限制
+        max-active: 8
+        #最大等待连接中的数量,设 0 为没有限制
+        max-idle: 8
+        #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+        max-wait: -1ms
+        #最小等待连接中的数量,设 0 为没有限制
+        min-idle: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+      shutdown-timeout: 100ms
+
+eureka:
+  client:
+    service-url:
+      #指定服务中心地址
+      defaultZone: http://turbid:turbid321@localhost:8000/eureka/
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+    #定义服务续约任务的调用间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #定义服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #首页
+    home-page-url: http://${eureka.instance.hostname}/
+    #状态页面
+    status-page-url: http://${eureka.instance.hostname}/info
+    #健康检查
+    health-check-url: http://${eureka.instance.hostname}/health
+
+###########################数据源配置###############################
+
+## master 数据源配置
+master:
+  datasource:
+    url: jdbc:mysql://anoax.com:3306/master?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zhangan@28
+    driverClassName: com.mysql.jdbc.Driver
+
+## cluster 数据源配置
+cluster:
+  datasource:
+    url: jdbc:mysql://anoax.com:3306/cluster?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zhangan@28
+    driverClassName: com.mysql.jdbc.Driver
+
+###########################mybatis配置###############################
+mybatis:
+  configuration:
+    #全局映射器启用缓存
+    cache-enabled: true
+    #查询时,关闭关联对象及时加载以提高性能
+    lazy-loading-enabled: false
+    #按需加载字段(加载字段由SQL指定),不会加载关联表的所有字段,以提高性能
+    aggressive-lazy-loading: false
+    #允许返回不同的结果集以达到通用的效果
+    multiple-result-sets-enabled: true
+    #对于批量更新操作缓存SQL以提高性能
+    default-executor-type: REUSE
+    #数据库执行超时时间
+    default-statement-timeout: 25000
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.trubid.basicapi.entity
+
